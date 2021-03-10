@@ -28,6 +28,7 @@ public class Board {
     @Size(min = 2, max = 30, message = "제목은 2~30 글자까지만 허용됩니다.")
     private String title;
 
+    @Column(columnDefinition = "TEXT")
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
