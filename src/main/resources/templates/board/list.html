@@ -32,10 +32,11 @@
         <tr th:each="board : ${boards}">
             <td th:text="${board.id}"></td>
             <td><a th:text="${board.title}" th:href="@{/board/form(id=${board.id})}"></a></td>
-            <td>홍길동</td>
+            <td th:text="${board.user.username}"></td>
         </tr>
         </tbody>
     </table>
+
     <div class="text-end">
         <a type="button" class="btn btn-info" th:href="@{/board/form}">글쓰기</a>
     </div>
